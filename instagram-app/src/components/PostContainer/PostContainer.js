@@ -1,4 +1,5 @@
 import React from 'react';
+import dummyData from '../dummy-data';
 import CommentSection from './CommentSection';
 
 //form for posting

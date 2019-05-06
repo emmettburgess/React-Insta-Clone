@@ -1,19 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import './Comment.css';
 
 
 //form for submiting a comment
-export default class Comment extends React.Component {
-    render() {
-        return (
-            <Form>
-                <FormGroup>
-                    <Label for="comment">Post Container</Label>
-                    <Input type="textarea" name="text" id="comment" />
-                </FormGroup>
-                <Button>Comment</Button>
-            </Form>
-        );
-    }
-}
+const Comment = props => {
+    return (
+        <div className="comment-container">
+            <span className="comment">{props.comment.text}</span>
+            {' '}
+            <span className="user">--{props.comment.username}</span>
+        </div>
+    );
+};
+
+Comment.propTypes = {
+    comment: PropTypes.shape({
+        text: PropTypes.string,
+        username: PropTypes.string
+    })
+};
 
 export default Comment;
