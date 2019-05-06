@@ -1,34 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
+import CommentForm from './CommentForm';
 
 //comments are displayed
 
-function CommentSection(props) {
-    return (
-        {props.commentSection.map(commentSection => (
-            <div key={commentSection.id} className="comment-section">
-                <img src={commentSection.img} alt={commentSection.name} />
-                <div>
-                    <h3>{commentSection.name}</h3>
-                    <Comment />
-                </div>
+class CommentSection extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            comments: props.comments
+        };
+    }
+
+    render() {
+        return (
+            <div>
+                {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
+                <CommentForm />
             </div>
-        ))}
-    );
+        )
+    }
 }
 
 CommentSection.propTypes = {
-    commentSection: PropTypes.arrayOf(
+    comments: PropTypes.arrayOf(
         PropTypes.shape({
-            username: PropTypes.string,
-            likes: PropTypes.number,
+            text: PropTypes.string,
+            username: PropTypes.string
         })
     )
-};
-
-CommentSection.defaultProps = {
-    commentSection: []
 };
 
 export default CommentSection;

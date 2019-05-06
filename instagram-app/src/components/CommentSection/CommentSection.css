@@ -1,0 +1,15 @@
+.comment-container {
+    text-align: left;
+    padding: 5px;
+    margin-left: 5px;
+}
+
+.comment {
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.user {
+    font-weight: 500;
+    font-size: 12px;
+}

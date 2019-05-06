@@ -1,21 +1,13 @@
 import React from 'react';
-import dummyData from '../dummy-data';
-import CommentSection from './CommentSection';
+import Post from './Post';
+import './PostContainer.css';
 
-//form for posting
-export default class PostContainer extends React.Component {
-    render() {
-        return (
-            <CommentSection />
-            <Form>
-                <FormGroup>
-                    <Label for="post">Post Container</Label>
-                    <Input type="textarea" name="text" id="post" />
-                </FormGroup>
-                <Button>Submit</Button>
-            </Form>
-        );
-    }
-}
+const PostContainer = props => {
+    return (
+        <div className="post-container">
+            {props.posts.map(p => <Post key={p.imageUrl} post={p} />)}
+        </div>
+    );
+};
 
 export default PostContainer;

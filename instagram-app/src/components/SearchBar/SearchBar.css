@@ -1,0 +1,16 @@
+.search-container {
+    border-bottom: 1px solid black;
+    height: 80px;
+    line-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+}
+
+.img-container {
+    height: 50px;
+}
+
+.logo {
+    height: 100%;
+}

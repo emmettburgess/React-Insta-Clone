@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Comment.css';
+import './CommentSection.css';
 
 
 //form for submiting a comment
 const Comment = props => {
     return (
         <div className="comment-container">
-            <span className="comment">{props.comment.text}</span>
-            {' '}
+            <span className="comment">{props.comment.text}</span>{' '}
             <span className="user">--{props.comment.username}</span>
         </div>
     );
