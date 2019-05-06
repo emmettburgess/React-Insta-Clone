@@ -5,6 +5,7 @@ import CommentSection from './CommentSection';
 export default class PostContainer extends React.Component {
     render() {
         return (
+            <CommentSection />
             <Form>
                 <FormGroup>
                     <Label for="post">Post Container</Label>
