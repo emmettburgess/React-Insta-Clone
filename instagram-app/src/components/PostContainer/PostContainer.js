@@ -1,7 +1,8 @@
 import React from 'react';
 import CommentSection from './CommentSection';
 
-export default class Example extends React.Component {
+//form for posting
+export default class PostContainer extends React.Component {
     render() {
         return (
             <Form>
