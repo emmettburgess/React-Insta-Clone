@@ -49,7 +49,7 @@ Post.propTypes = {
     post: PropTypes.shape({
         username: PropTypes.string,
         thumbnailUrl: PropTypes.string,
-        imageUrl: Proptypes.string
+        imageUrl: PropTypes.string
     })
 };
 
