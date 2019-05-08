@@ -19,7 +19,7 @@ class App extends Component {
 
   searchPostHandler = e => {
     const posts = this.state.posts.filter(p => {
-      if (p.username.includes.(e.target.value)) {
+      if (p.username.includes(e.target.value)) {
         return p;
       }
     });
