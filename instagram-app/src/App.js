@@ -1,48 +1,24 @@
 import React, {Component} from 'react';
 import './App.css';
-import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/PostContainer';
-import SearchBar from './components/SearchBar/SearchBar';
+import PostPage from './components/PostContainer/PostPage';
+import Login from './components/Login/Login';
+import Authentication from './components/Authentication/Authentication';
 
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      posts: [],
-      filteredPosts: []
-    };
+    this.state = {};
   }
-
-  componentDidMount() {
-    this.setState({posts: dummyData});
-  }
-
-  searchPostHandler = e => {
-    const posts = this.state.posts.filter(p => {
-      if (p.username.includes(e.target.value)) {
-        return p;
-      }
-    });
-    this.setState({filteredPosts: posts});
-  };
 
   render() {
     return (
-      <div className="app">
-        <SearchBar
-          searchTerm={this.state.searchTerm}
-          searchPosts={this.searchPostHandler}
-        />
-        <PostContainer
-          posts = {
-            this.state.filteredPosts.length > 0
-            ? this.state.filteredPosts
-            : this.state.posts
-          }
-        />
+      <div className="App">
+        <ComponentFromAuthentication />
       </div>
     );
   }
 }
+
+const ComponentFromAuthentication = Authentication(PostPage)(Login);
 
 export default App;
