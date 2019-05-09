@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
-import CommentForm from './CommentForm';
+import CommentInput from './CommentInput';
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -53,7 +53,7 @@ class CommentSection extends React.Component {
     return (
       <div>
         {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
-        <CommentForm
+        <CommentInput
           comment={this.state.comment}
           submitComment={this.handleCommentSubmit}
           changeComment={this.commentHandler}
