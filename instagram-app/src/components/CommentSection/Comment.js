@@ -22,22 +22,18 @@ const CommentParagraph = styled.p`
 //form for submiting a comment
 const Comment = props => {
     return (
-        <FlexWrapper>
-            <UserName>
-                {props.comment.username}
-            </UserName>
-            <CommentParagraph>
-                {props.comment.text}
-            </CommentParagraph>
-        <FlexWrapper>
+      <FlexWrapper>
+        <UserName>{props.comment.username}</UserName>
+        <CommentParagraph>{props.comment.text}</CommentParagraph>
+      </FlexWrapper>
     );
-};
-
-Comment.propTypes = {
+  };
+  
+  Comment.propTypes = {
     comment: PropTypes.shape({
-    text: PropTypes.string,
-    username: PropTypes.string
+        text: PropTypes.string,
+        username: PropTypes.string
     })
-};
-
-export default Comment;
+  };
+  
+  export default Comment;
