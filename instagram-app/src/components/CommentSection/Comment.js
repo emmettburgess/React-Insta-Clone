@@ -14,7 +14,7 @@ export const FlexWrapper = styled.div`
 
 const CommentParagraph = styled.p`
   font-weight: 400;
-  font-size: 0.8em;
+  font-size: 1em;
   padding: 0 5px;
 `;
 
