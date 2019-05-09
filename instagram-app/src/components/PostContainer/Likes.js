@@ -11,27 +11,22 @@ const LikesDiv = styled.div`
 
 const Likes = props => {
     return [
-        <FlexWrapper
-            key="likes-icons-container"
-            onClick={props.incrementLike}
-            comment
-        >
-            <LikesDiv>
-                <i className="heart" />
-            </LikesDiv>
-            <LikesDiv>
-                <i className="comment" />
-            </LikesDiv>
-        </FlexWrapper>
-        <FlexWrapper
-            key="likes-container"
-            comment
-        >
-            <LikesDiv>
-                {props.likes}
-            </LikesDiv>
-        </FlexWrapper>
+      <FlexWrapper
+        key="likes-icons-container"
+        onClick={props.incrementLike}
+        comment
+      >
+        <LikesDiv>
+          <i className="heart" />
+        </LikesDiv>
+        <LikesDiv>
+          <i className="comment" />
+        </LikesDiv>
+      </FlexWrapper>,
+      <FlexWrapper key="likes-container" comment>
+        <LikesDiv>{props.likes}</LikesDiv>
+      </FlexWrapper>
     ];
-};
+  };
 
 export default Likes;

@@ -4,7 +4,7 @@ import CommentSection from '../CommentSection/CommentSection';
 import Likes from './Likes';
 import PostHeader from './PostHeader';
 import styled from 'styled-components';
-import './Posts.css';
+import './PostContainer.css';
 
 const PostBorder = styled.div`
   border: 1px solid black;
@@ -37,7 +37,7 @@ class Post extends React.Component {
           thumbnailUrl={this.props.post.thumbnailUrl}
         />
         <PostImage alt="post image" src={this.props.post.imageUrl} />
-        <LikeSection
+        <Likes
           incrementLike={this.incrementLike}
           likes={this.state.likes}
         />
